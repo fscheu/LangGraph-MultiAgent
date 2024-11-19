@@ -1,3 +1,5 @@
 venv/*
 config.ini
 __pycache__/*
+tools/__pycache__/*
+images/*

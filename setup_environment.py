@@ -1,6 +1,8 @@
 ###### Funciones de utilidad ######
 import os
 import configparser
+from datetime import date
+
 
 
 def read_ini(file_path):
