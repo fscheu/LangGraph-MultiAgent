@@ -4,7 +4,6 @@ import configparser
 from datetime import date
 
 
-
 def read_ini(file_path):
     config = configparser.ConfigParser()
     config.read(file_path)
@@ -16,6 +15,8 @@ config = read_ini("config.ini")
 
 def set_environment_variables(project_name: str = "") -> None:
     os.environ["OPENAI_API_KEY"] = str(config["LLM"]["OPENAI_API_KEY"])
+
+    os.environ["TAVILY_API_KEY"] = str(config["TAVILY"]["TAVILY_API_KEY"])
 
     if not project_name:
         project_name = f"Test_{date.today()}"
