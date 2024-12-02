@@ -136,7 +136,7 @@ workflow.set_entry_point(TEAM_SUPERVISOR_NAME)
 travel_agent_graph = workflow.compile()
 
 for chunk in travel_agent_graph.stream(
-    {"messages": [HumanMessage(content="I want to go to Paris for three days")]}
+    {"messages": [HumanMessage(content="I want to go to San Pedro, Buenos Aires for three days")]}
 ):
     if "__end__" not in chunk:
         print(chunk)
